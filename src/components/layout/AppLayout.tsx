@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const NavLink = ({ to, label }: { to: string; label: string }) => {
   const location = useLocation();
@@ -40,9 +40,7 @@ const AppLayoutInner = () => {
 };
 
 const AppLayout = () => (
-  <HelmetProvider>
-    <AppLayoutInner />
-  </HelmetProvider>
+  <AppLayoutInner />
 );
 
 export default AppLayout;
