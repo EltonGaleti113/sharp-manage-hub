@@ -53,6 +53,16 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand & design tokens */
+    --brand: 350 84% 52%; /* barber red */
+    --brand-2: 224 76% 55%; /* barber blue */
+    --brand-foreground: 0 0% 98%;
+
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+    --shadow-glow: 0 10px 30px -10px hsl(var(--brand) / 0.35);
+    --shadow-glow-strong: 0 24px 64px -24px hsl(var(--brand-2) / 0.45);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
@@ -91,6 +101,16 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand & design tokens - dark */
+    --brand: 350 84% 56%;
+    --brand-2: 224 76% 60%;
+    --brand-foreground: 0 0% 100%;
+
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+    --shadow-glow: 0 10px 30px -10px hsl(var(--brand) / 0.5);
+    --shadow-glow-strong: 0 28px 72px -28px hsl(var(--brand-2) / 0.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
