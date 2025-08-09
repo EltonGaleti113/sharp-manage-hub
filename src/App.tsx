@@ -13,6 +13,7 @@ import Sales from "./pages/Sales";
 import Purchases from "./pages/Purchases";
 import Reports from "./pages/Reports";
 import Clients from "./pages/Clients";
+import SalesReport from "./pages/SalesReport";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="products" element={<Products />} />
             <Route path="services" element={<Services />} />
             <Route path="sales" element={<Sales />} />
+            <Route path="sales-report" element={<SalesReport />} />
             <Route path="purchases" element={<Purchases />} />
             <Route path="reports" element={<Reports />} />
             <Route path="clients" element={<Clients />} />

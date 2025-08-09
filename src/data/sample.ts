@@ -51,3 +51,15 @@ export const sampleRevenueSeries = [
   { date: "2025-08-03", revenue: 510, cost: 110 },
   { date: "2025-08-04", revenue: 460, cost: 98 },
 ];
+
+export const productSales = [
+  { id: "ps1", date: "2025-08-01", productId: "p1", productName: "Pomada Modeladora", qty: 2, unitPrice: 35 },
+  { id: "ps2", date: "2025-08-02", productId: "p2", productName: "Shampoo Clássico", qty: 1, unitPrice: 29 },
+  { id: "ps3", date: "2025-08-03", productId: "p3", productName: "Condicionador Forte", qty: 3, unitPrice: 32 },
+];
+
+export const serviceSales = [
+  { id: "ss1", date: "2025-08-01", serviceId: "s1", serviceName: "Corte Simples", qty: 4, unitPrice: 35 },
+  { id: "ss2", date: "2025-08-02", serviceId: "s2", serviceName: "Barba", qty: 5, unitPrice: 30 },
+  { id: "ss3", date: "2025-08-03", serviceId: "s3", serviceName: "Combo Corte + Barba", qty: 2, unitPrice: 60 },
+];

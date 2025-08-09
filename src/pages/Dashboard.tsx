@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { products, services, sampleRevenueSeries } from "@/data/sample";
+import { products, services, sampleRevenueSeries, productSales, serviceSales } from "@/data/sample";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 const k = (n: number) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -11,6 +11,8 @@ const Dashboard = () => {
   const profit = revenue - cost;
   const lowStock = products.filter(p => p.stock <= 5);
   const topServices = services.slice(0, 3);
+  const productRevenue = productSales.reduce((a, b) => a + b.qty * b.unitPrice, 0);
+  const serviceRevenue = serviceSales.reduce((a, b) => a + b.qty * b.unitPrice, 0);
 
   return (
     <div className="space-y-8">
@@ -40,6 +42,21 @@ const Dashboard = () => {
             <CardTitle>Lucro Bruto</CardTitle>
           </CardHeader>
           <CardContent className="text-2xl font-bold">{k(profit)}</CardContent>
+        </Card>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Card className="shadow-glow">
+          <CardHeader>
+            <CardTitle>Receita - Produtos</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold">{k(productRevenue)}</CardContent>
+        </Card>
+        <Card className="shadow-glow">
+          <CardHeader>
+            <CardTitle>Receita - Serviços</CardTitle>
+          </CardHeader>
+          <CardContent className="text-2xl font-bold">{k(serviceRevenue)}</CardContent>
         </Card>
       </div>
 

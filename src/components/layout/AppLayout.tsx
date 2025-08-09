@@ -24,6 +24,7 @@ const AppLayoutInner = () => {
           <div className="flex flex-wrap gap-2">
             <NavLink to="/dashboard" label="Dashboard" />
             <NavLink to="/sales" label="Vendas" />
+            <NavLink to="/sales-report" label="Relatório de vendas" />
             <NavLink to="/products" label="Produtos" />
             <NavLink to="/services" label="Serviços" />
             <NavLink to="/purchases" label="Compras" />
