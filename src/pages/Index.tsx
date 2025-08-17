@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
+  const { signOut } = useAuth();
+
   return (
     <main className="min-h-screen bg-background flex items-center justify-center">
       <Helmet>
@@ -19,6 +22,9 @@ const Index = () => {
           </Button>
           <Button asChild variant="outline" size="lg">
             <Link to="/products">Cadastrar Itens</Link>
+          </Button>
+          <Button variant="secondary" size="lg" onClick={signOut}>
+            Sair
           </Button>
         </div>
         <div className="relative mt-14">
